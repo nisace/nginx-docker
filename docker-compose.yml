@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  webserver:
+    image: nginx:1.13
+    ports:
+      - "80:80"
+    volumes:
+      - "./configuration/webserver/nginx.conf:/etc/nginx/nginx.conf"
+      - "./application/webserver:/var/www/front:ro"
